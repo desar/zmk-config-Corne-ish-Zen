@@ -15,8 +15,8 @@
 #define ADJUST 4
 
 #define JIME	LA(GRAVE)
-#define DSKR	LC(LWIN(RIGHT))
-#define DSKL	LC(LWIN(LEFT))
+#define DSKR	LC(LG(RIGHT))
+#define DSKL	LC(LG(LEFT))
 #define MCPY	LC(C)
 #define MPST	LC(V)
 #define RERE	LC(R)
@@ -38,9 +38,9 @@
                 raise_layer {
                         label = "RAISE";
                         bindings = <
-   &kp JIME  &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp KP_N4  &kp KP_N5   &kp KP_N6 &kp KP_N7 &kp KP_N8 &kp KP_N9 &kp KP_N0 &kp DEL
-   &none     &none     &kp LEFT  &kp UP    &kp RIGHT  &kp DSKL    &none     &none     &none     &none     &none     &none  
-   &none     &kp RERE  &kp MCPY  &kp DOWN  &kp MPST   &kp DSKR    &none     &none     &none     &none     &none     &none  
+   &kp JIME  &kp N1    &kp N2    &kp N3    &kp N4     &kp N5      &kp N6    &kp N7    &kp N8    &kp N9    &kp N0   &kp DEL
+   &none     &none     &kp LEFT  &kp UP    &kp RIGHT  &kp DSKL    &none     &none     &none     &none     &none    &none  
+   &none     &kp RERE  &kp MCPY  &kp DOWN  &kp MPST   &kp DSKR    &none     &none     &none     &none     &none    &none  
    &none &kp BSPC  &kp LWIN                                   &kp LALT  &kp SPACE &none
                         >;
                 };
