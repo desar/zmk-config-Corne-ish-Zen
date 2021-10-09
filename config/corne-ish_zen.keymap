@@ -12,7 +12,7 @@
 #define QWERTY 0
 #define LOWER  1
 #define RAISE  2
-#define ADJUST 4
+#define ADJUST 3
 
 #define JIME	LA(GRAVE)
 #define DSKR	LC(LG(RIGHT))
