@@ -17,8 +17,8 @@
 #define JIME	LA(GRAVE)
 #define DSKR	LC(LWIN(RIGHT))
 #define DSKL	LC(LWIN(LEFT))
-#define COPY	LC(C)
-#define PSTE	LC(V)
+#define MCPY	LC(C)
+#define MPST	LC(V)
 #define RERE	LC(R)
 
 / {
@@ -40,7 +40,7 @@
                         bindings = <
    &kp JIME  &kp N1    &kp N2    &kp N3    &kp N4     &kp N5      &kp N6    &kp N7    &kp N8    &kp N9    &kp N0   &kp BKSP
    &none     &none     &kp LEFT  &kp UP    &kp RIGHT  &kp DSKL    &none     &none     &none     &none     &none    &none  
-   &none     &kp RERE  &kp COPY  &kp DOWN  &kp PSTE   &kp DSKR    &none     &none     &none     &none     &none    &none  
+   &none     &kp RERE  &kp MCPY  &kp DOWN  &kp MPST   &kp DSKR    &none     &none     &none     &none     &none    &none  
    &mo LOWER &kp BSPC  &kp LWIN                                   &kp LALT  &kp SPACE &mo RAISE
                         >;
                 };
