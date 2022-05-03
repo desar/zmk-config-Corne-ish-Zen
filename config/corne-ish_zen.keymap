@@ -9,10 +9,10 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
-#define QWERTY 0
+#define BASE   0
 #define LOWER  1
 #define RAISE  2
-#define ADJUST 3
+#define FUNC   3
 
 #define JIME	LA(GRAVE)
 #define DSKR	LC(LG(RIGHT))
@@ -38,13 +38,13 @@
                 compatible = "zmk,keymap";
 
                 default_layer {
-                        label = "QWERTY";
+                        label = "BASE";
                         bindings = <
 // -----------+----------+----------+----------+----------+----------+----+----------+----------+----------+----------+----------+----------+
 // |  TAB     |  Q       |  W       |  E       |  R       |  T       |    |  Y       |  U       |  I       |  O       |  P       | ESC      |
 // |  SHFT    |  A       |  S       |  D       |  F       |  G       |    |  H       |  J       |  K       |  L       |  ;       |  '       |
 // |  CTRL    |  Z       |  X       |  C       |  V       |  B       |    |  N       |  M       |  ,       |  .       |  /       | RET      |
-// +----------+----------+----------|  LWR     |  BKSP    |  GUI     |    |  ALT     |  SPC     |  RSE     |----------+----------+----------+
+// +----------+----------+----------|  LWR     |  BKSP    |  WIN     |    |  ALT     |  SPC     |  RSE     |----------+----------+----------+
 //                                  +----------+----------+----------+    +----------+----------+----------+
    &kp TAB    &kp Q      &kp W      &kp E      &kp R      &kp T           &kp Y      &kp U      &kp I      &kp O      &kp P      &kp ESC
    &kp LSHFT  &kp A      &kp S      &kp D      &kp F      &kp G           &kp H      &kp J      &kp K      &kp L      &kp SEMI   &kp SQT
@@ -58,14 +58,14 @@
                         bindings = <
 // -----------+----------+----------+----------+----------+----------+----+----------+----------+----------+----------+----------+----------+
 // |          |  1       |  2       |  3       |  4       |  5       |    |  6       |  7       |  8       |  9       |  0       |  DEL     |
-// |          |          |          |  ↑       |          |          |    |          |          |          |          |          |          |
-// |          |          |  ←       |  ↓       |  →       |          |    |          |          |          |          |          |          |
-// +----------+----------+----------|  LWR     |  BKSP    |  GUI     |    |  ALT     |  SPC     |  RSE     |----------+----------+----------+
+// |  CTRL-C  |  CTRL-V  |          |  ↑       |          |  DSKL    |    |          |  HOME    |  PGUP    |  PSCRN   |          |          |
+// |  CTRL-R  |          |  ←       |  ↓       |  →       |  DSKR    |    |          |  END     |  PGDN    |          |          |          |
+// +----------+----------+----------|  LWR     |  BKSP    |  WIN     |    |  ALT     |  SPC     |  FUNC    |----------+----------+----------+
 //                                  +----------+----------+----------+    +----------+----------+----------+
-   &kp JIME   &kp N1     &kp N2     &kp N3     &kp N4     &kp N5          &kp N6     &kp N7     &kp N8     &kp N9     &kp N0     &kp DEL
-   &none      &none      &kp LEFT   &kp UP     &kp RIGHT  &kp DSKL        &none      &none      &none      &none      &none      &none  
-   &none      &kp RERE   &kp MCPY   &kp DOWN   &kp MPST   &kp DSKR        &none      &none      &none      &none      &none      &none  
-                                    &mo LOWER  &kp BSPC   &kp LWIN        &kp LALT   &kp SPACE  &tog ADJUST
+   &none      &kp N1     &kp N2     &kp N3     &kp N4     &kp N5          &kp N6     &kp N7     &kp N8     &kp N9     &kp N0     &kp DEL
+   &kp MCPY   &kp MPST   &none      &kp UP     &none      &kp DSKL        &none      &kp HOME   &kp PG_UP  &kp PSCRN  &none      &none  
+   &kp RERE   &none      &kp LEFT   &kp DOWN   &kp RIGHT  &kp DSKR        &none      &kp END    &kp PG_DN  &none      &none      &none  
+                                    &mo LOWER  &kp BSPC   &kp LWIN        &kp LALT   &kp SPACE  &tog FUNC
                         >;
                 };
 				
@@ -74,30 +74,30 @@
                         bindings = <
 // -----------+----------+----------+----------+----------+----------+----+----------+----------+----------+----------+----------+----------+
 // |          |  !       |  @       |  #       |  $       |  %       |    |  ^       |  &       |  *       |  (       |  )       |  DEL     |
-// |          |          |          |          |          |          |    |  -       |  =       |  [       |  ]       |  |       |  `       |
-// |          |          |          |          |          |          |    |  _       |  +       |  {       |  }       |  \       |  ~       |
-// +----------+----------+----------|  LWR     |  BKSP    |  GUI     |    |  ALT     |  SPC     |  RSE     |----------+----------+----------+
+// |   F1     |  F2      |  F3      |  F4      |  F5      |  F11     |    |  -       |  =       |  [       |  ]       |  |       |  `       |
+// |   F6     |  F7      |  F8      |  F9      |  F10     |  F12     |    |  _       |  +       |  {       |  }       |  \       |  ~       |
+// +----------+----------+----------|  FUNC    |  BKSP    |  WIN     |    |  ALT     |  SPC     |  RSE     |----------+----------+----------+
 //                                  +----------+----------+----------+    +----------+----------+----------+
-   &kp JIME   &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT       &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR   &kp RPAR   &kp DEL  
-   &none      &none      &none      &none      &none      &kp K_APP       &kp MINUS  &kp EQUAL  &kp LBRC   &kp RBRC   &kp PIPE   &kp GRAVE  
-   &none      &none      &none      &none      &none      &none           &kp UNDER  &kp PLUS   &kp LBKT   &kp RBKT   &kp BSLH   &kp TILDE  
-                                    &tog ADJUST &kp BSPC  &kp LWIN        &kp LALT   &kp SPACE  &mo RAISE
+   &none      &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT       &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR   &kp RPAR   &kp DEL  
+   &kp F1     &kp F2     &kp F3     &kp F4     &kp F5     &kp F11         &kp MINUS  &kp EQUAL  &kp LBRC   &kp RBRC   &kp PIPE   &kp GRAVE  
+   &kp F6     &kp F7     &kp F8     &kp F9     &kp F10    &kp F12         &kp UNDER  &kp PLUS   &kp LBKT   &kp RBKT   &kp BSLH   &kp TILDE  
+                                    &tog FUNC  &kp BSPC   &kp LWIN        &kp LALT   &kp SPACE  &mo RAISE
                         >;
                 };
 
                 adjust_layer {
-                        label = "ADJUST";
+                        label = "FUNC";
                         bindings = <
 // -----------+----------+----------+----------+----------+----------+----+----------+----------+----------+----------+----------+----------+
-// |  F1      |  F2      |  F3      |  F4      |  F5      |  F6      |    |  F7      |  F8      |  F9      |  F10     |  F11     |  F12     |
+// |  BT0     |  BT1     |  BT2     |  BT3     |  BT4     |          |    |          |          |          |          |          |          |
 // |          |          |          |          |          |          |    |          |          |          |          |          |          |
 // |          |          |          |          |          |          |    |          |          |          |          |          |          |
-// +----------+----------+----------|  LWR     |  BKSP    |  GUI     |    |  ALT     |  SPC     |  RSE     |----------+----------+----------+
+// +----------+----------+----------|          |  BKSP    |  GUI     |    |  ALT     |  SPC     |          |----------+----------+----------+
 //                                  +----------+----------+----------+    +----------+----------+----------+
-   &kp F1     &kp F2     &kp F3     &kp F4     &kp F5     &kp F6          &kp F7     &kp F8     &kp F9     &kp F10    &kp F11     &kp F12  
-   BT0        BT1        BT2        BT3        BT4        &none           &none      &kp HOME   &kp PG_UP  &kp PSCRN  &none       &none  
-   &none      &none      &none      &none      &none      &none           &none      &kp END    &kp PG_DN  &none      &none       &none  
-                                    &tog ADJUST &kp BSPC  &kp LWIN        &kp LALT   &kp SPACE  &tog ADJUST
+   BT0        BT1        BT2        BT3        BT4        &none           &none      &none      &none      &none      &none      &none  
+   &none      &none      &none      &none      &none      &none           &none      &none      &none      &none      &none      &none  
+   &none      &none      &none      &none      &none      &none           &none      &none      &none      &none      &none      &none  
+                                    &tog FUNC  &kp BSPC   &kp LWIN        &kp LALT   &kp SPACE  &tog FUNC
                         >;
                 };			
         };
