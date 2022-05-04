@@ -74,13 +74,13 @@
                         bindings = <
 // -----------+----------+----------+----------+----------+----------+----+----------+----------+----------+----------+----------+----------+
 // |          |  1       |  2       |  3       |  4       |  5       |    |  6       |  7       |  8       |  9       |  0       |  DEL     |
-// |  DSKL    |  HOME    |          |  ↑       |          |  PGUP    |    |  CTRL-C  |  CTRL-V  |  CTRL-R  |          |          |  PSCRN   |
-// |  DSKR    |  END     |  ←       |  ↓       |  →       |  PGDN    |    |          |          |          |          |          |          |
+// |  DSKL    |  HOME    |          |  ↑       |          |  PGUP    |    |  INS     |  CTRL-C  |  CTRL-V  |  CTRL-R  |          |  PSCRN   |
+// |  DSKR    |  END     |  ←       |  ↓       |  →       |  PGDN    |    |  DEL     |          |          |          |          |          |
 // +----------+----------+----------|  LWR     |  BKSP    |  WIN     |    |  ALT     |  SPC     |  FUNC    |----------+----------+----------+
 //                                  +----------+----------+----------+    +----------+----------+----------+
    &none      &kp N1     &kp N2     &kp N3     &kp N4     &kp N5          &kp N6     &kp N7     &kp N8     &kp N9     &kp N0     &kp DEL
-   &kp HOME   &kp PG_UP  &none      &kp UP     &none      &kp DSKL        &kp MCPY   &kp MPST   &kp RERE   &none      &none      &kp PSCRN  
-   &kp END    &kp PG_DN  &kp LEFT   &kp DOWN   &kp RIGHT  &kp DSKR        &none      &none      &none      &none      &none      &none  
+   &kp DSKL   &kp HOME   &none      &kp UP     &none      &kp PG_UP       &kp INS    &kp MCPY   &kp MPST   &kp RERE   &none      &kp PSCRN  
+   &kp DSKR   &kp END    &kp LEFT   &kp DOWN   &kp RIGHT  &kp PG_DN       &kp DEL    &none      &none      &none      &none      &none      &none  
                                     &mo LOWER  &kp BSPC   &kp LWIN        &kp LALT   &kp SPACE  &tog FUNC
                         >;
                 };
