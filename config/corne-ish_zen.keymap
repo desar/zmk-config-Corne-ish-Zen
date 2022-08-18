@@ -49,7 +49,7 @@
    &kp TAB    &kp Q      &kp W      &kp E      &kp R      &kp T           &kp Y      &kp U      &kp I      &kp O      &kp P      &kp ESC
    &kp LSHFT  &kp A      &kp S      &kp D      &kp F      &kp G           &kp H      &kp J      &kp K      &kp L      &kp SEMI   &kp SQT
    &kp LCTL   &kp Z      &kp X      &kp C      &kp V      &kp B           &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH   &kp RET
-                                    &mo LOWER  &kp BSPC   &kp LWIN        &kp LALT   &kp SPACE  &mo RAISE
+                                    &mo LOWER  &kp SPACE  &kp LWIN        &kp LALT   &kp BSPC   &mo RAISE
                         >;
                 };
 
@@ -65,7 +65,7 @@
    &none      &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT       &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR   &kp RPAR   &kp DEL  
    &kp F1     &kp F2     &kp F3     &kp F4     &kp F5     &kp F11         &kp MINUS  &kp EQUAL  &kp LBRC   &kp RBRC   &kp PIPE   &kp GRAVE  
    &kp F6     &kp F7     &kp F8     &kp F9     &kp F10    &kp F12         &kp UNDER  &kp PLUS   &kp LBKT   &kp RBKT   &kp BSLH   &kp TILDE  
-                                    &tog FUNC  &kp BSPC   &kp LWIN        &kp LALT   &kp SPACE  &mo RAISE
+                                    &tog FUNC  &kp SPACE  &kp LWIN        &kp LALT   &kp BSPC   &mo RAISE
                         >;
                 };
 
@@ -81,7 +81,7 @@
    &none      &kp N1     &kp N2     &kp N3     &kp N4     &kp N5          &kp N6     &kp N7     &kp N8     &kp N9     &kp N0     &kp DEL
    &kp DSKL   &kp HOME   &none      &kp UP     &none      &kp PG_UP       &kp INS    &kp MCPY   &kp MPST   &kp RERE   &none      &kp PSCRN  
    &kp DSKR   &kp END    &kp LEFT   &kp DOWN   &kp RIGHT  &kp PG_DN       &kp DEL    &none      &none      &none      &none      &none      &none  
-                                    &mo LOWER  &kp BSPC   &kp LWIN        &kp LALT   &kp SPACE  &tog FUNC
+                                    &mo LOWER  &kp SPACE  &kp LWIN        &kp LALT   &kp BSPC   &tog FUNC
                         >;
                 };
 				
@@ -97,7 +97,7 @@
    BT0        BT1        BT2        BT3        BT4        &none           &none      &none      &none      &none      &none      &none  
    &none      &none      &none      &none      &none      &none           &none      &none      &none      &none      &none      &none  
    &none      &none      &none      &none      &none      &none           &none      &none      &none      &none      &none      &none  
-                                    &tog FUNC  &kp BSPC   &kp LWIN        &kp LALT   &kp SPACE  &tog FUNC
+                                    &tog FUNC  &kp SPACE  &kp LWIN        &kp LALT   &kp BSPC   &tog FUNC
                         >;
                 };			
         };
